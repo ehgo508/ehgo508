@@ -1,4 +1,4 @@
-[Uploading README.md…]()
+[README.md](https://github.com/user-attachments/files/35074936/README.md)
 # 🛠 프로젝트 포트폴리오
 
 > 직접 만들고, 측정하고, 고친 기록입니다. **진행한 순서대로** 정리했습니다.
@@ -6,9 +6,9 @@
 
 | # | 기간 | 프로젝트 | 성격 | 핵심 기술 |
 | --- | --- | --- | --- | --- |
-| 1 | 2026.03 ~ 05 | [CourseBox](#1-coursebox--ai-여행-코스-추천) | 팀 | React, FastAPI, TourAPI, OpenAI API |
+| 1 | 2026.03 ~ 06 | [CourseBox](#1-coursebox--ai-여행-코스-추천) | 산학 팀 프로젝트 (4명) · 팀장 | React, FastAPI, TourAPI, OpenAI API |
 | 2 | 2026.10 | [개발 일지 블로그](#2-개발-일지-블로그--정적-사이트--sqlite--github-actions) | 개인 | HTML/JS, SQLite(sql.js), Python, GitHub Actions |
-| 3 | 2026.10 | [Blogville](#3-blogville--글을-쓸수록-마을이-자라는-게임형-블로그) | 팀 (3명) | Next.js 16, TypeScript, PostgreSQL, Drizzle, Phaser, Playwright, Docker |
+| 3 | 2026.10 | [Blogville](#3-blogville--글을-쓸수록-마을이-자라는-게임형-블로그) | 팀 (3명) · 팀 리드 | Next.js 16, TypeScript, PostgreSQL, Drizzle, Phaser, Playwright, Docker |
 | 4 | 2026.10 | [실내 환경 시계열 추론](#4-실내-환경-시계열-추론--co₂온도-예측이상-탐지-상시-서비스) | 개인 | PyTorch(GRU), Chronos-2, ONNX Runtime, TensorRT, MQTT |
 | 5 | 2026.10 | [EmbeddingGemma 2 멀티모달 검색](#5-embeddinggemma-2--엣지에서-멀티모달-검색과-동작-인식) | 개인 | sentence-transformers, 미세 조정, YOLO-pose, YOLOE |
 | 6 | 2026.10 ~ 11 | [Jetson 카메라 응용](#6-jetson-카메라-응용--재실-인원근접-경고-통합-서비스) | 개인 | Jetson Orin Nano, YOLO11 + TensorRT, OpenCV 스테레오, MQTT |
@@ -36,7 +36,7 @@
 
 - 저장소: [coursebox-app](https://github.com/ehgo508/coursebox-app)
 - 기술: React(Vite, Tailwind), FastAPI, SQLite, 한국관광공사 TourAPI, OpenAI API
-- 성격: **팀 프로젝트.** 처음 한 팀 작업이라 Git 협업 방식을 몰라, 팀원들의 작업을 제가 모아 한 저장소에 올렸습니다.
+- 성격: **산학 팀 프로젝트(4명), 팀장·풀스택.** 처음 한 팀 작업이라 Git 협업 방식을 몰라, 팀원들의 작업을 제가 모아 한 저장소에 올렸습니다.
 
 ### 🔧 트러블슈팅
 
@@ -94,7 +94,7 @@
 
 - 저장소: [wcblogville/blogville](https://github.com/wcblogville/blogville) (커밋 400여 개, PR 120여 개) · 설계 문서: [wcblogville/docs](https://github.com/wcblogville/docs)
 - 기술: Next.js 16(App Router), TypeScript, PostgreSQL + Drizzle ORM, Better Auth(카카오·네이버·구글), Tiptap, Phaser 4, Playwright, GitHub Actions, Docker, nginx
-- **내 역할:** 저장소 운영과 PR 리뷰·병합, 요구사항·ERD 작성, 회원·블로그·게임 기능 구현, 배포 파이프라인
+- **내 역할:** 팀 리드. 저장소 운영과 PR 리뷰·병합, 요구사항·ERD 작성, 회원·블로그·게임 기능 구현, 배포 파이프라인
 
 ### 🔧 트러블슈팅
 
@@ -124,7 +124,7 @@
 | **변화** | 글 수 정상 표시. E2E 시나리오(US2-3)로 회귀 확인 |
 | **근거** | [커밋 0a01a9d](https://github.com/wcblogville/blogville/commit/0a01a9d) |
 
-> 그 밖에: 달이 바뀌면 연속 출석이 0일이 되던 버그를 "가장 최근 출석 1건" 기준으로 고치고 달·해 바뀜 경계를 테스트로 고정([c2c3980](https://github.com/wcblogville/blogville/commit/c2c3980)), 공용 서버 Docker 네트워크에서 DB에 못 가던 문제(EHOSTUNREACH)를 host 네트워크로 자동 재시도해 해결([0f1c698](https://github.com/wcblogville/blogville/commit/0f1c698))
+> 그 밖에: 달이 바뀌면 연속 출석이 0일이 되던 버그를 "가장 최근 출석 1건" 기준으로 고치고 달·해 바뀜 경계를 테스트로 고정([c2c3980](https://github.com/wcblogville/blogville/commit/c2c3980))
 
 ---
 
