@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/35074936/README.md)
 # 🛠 프로젝트 포트폴리오
 
 > 직접 만들고, 측정하고, 고친 기록입니다. **진행한 순서대로** 정리했습니다.
@@ -20,6 +19,7 @@
 | --- | --- | --- |
 | 개발 일지 블로그 | 글 배포 | 수동 빌드·DB 커밋 → push만 하면 자동 배포 (빌드 6초 + 배포 12초) |
 | Blogville | 상점 페이지 크기 | 0.9MB → 0.4MB |
+| Blogville | 블로그 첫 화면 (휴대폰 Lighthouse 성능) | 81점 → 87점 (HTML 77KB → 56KB) |
 | 실내 환경 시계열 | 60분 CO₂ 예측 (실습실) | 직전값보다 18% 나쁨 → 22% 좋음 (Chronos-2는 39%) |
 | 실내 환경 시계열 | 경보 중복 (3시간) | 38건 → 20건 |
 | EmbeddingGemma 2 | 박수 오판정 (가만히 있을 때) | 11~19회 → 0회 |
@@ -124,7 +124,9 @@
 | **변화** | 글 수 정상 표시. E2E 시나리오(US2-3)로 회귀 확인 |
 | **근거** | [커밋 0a01a9d](https://github.com/wcblogville/blogville/commit/0a01a9d) |
 
-> 그 밖에: 달이 바뀌면 연속 출석이 0일이 되던 버그를 "가장 최근 출석 1건" 기준으로 고치고 달·해 바뀜 경계를 테스트로 고정([c2c3980](https://github.com/wcblogville/blogville/commit/c2c3980))
+> 그 밖에: 매일 밤 성능 검사에서 블로그 첫 화면 점수가 기준 아래로 떨어진 원인을 찾아, 닫혀 있는 동물 도감 창(44칸 그림)을 **처음 열 때 그리도록** 바꿈. 휴대폰 Lighthouse **81 → 87점**, HTML 77KB → 56KB, FCP 2.6 → 1.8초, LCP 3.9 → 3.3초([PR #134](https://github.com/wcblogville/blogville/pull/134))
+>
+> 달이 바뀌면 연속 출석이 0일이 되던 버그를 "가장 최근 출석 1건" 기준으로 고치고 달·해 바뀜 경계를 테스트로 고정([c2c3980](https://github.com/wcblogville/blogville/commit/c2c3980))
 
 ---
 
