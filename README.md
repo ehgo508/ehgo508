@@ -263,6 +263,10 @@ flowchart LR
 - 구성: Flutter 앱 → **Spring Cloud Gateway(인증·사용량 제한·TTS/STT)** → **agent(Spring AI + MCP 클라이언트, GPT 판단)** → 기능별 MCP 서버
 - **내 담당:** `fashion-agent-gateway`, `fashion-agent-agent` (두 레포 README에 담당자로 명시), iOS 빌드 문제 해결, 발표용 음성(TTS) 방식 결정
 
+<img src="images/fashion-agent-start.png" alt="패션 에이전트 앱 첫 화면" width="260">
+
+> 앱의 첫 화면입니다(웹 빌드로 직접 띄워 캡처). 화면을 보지 않는 사용자를 위해 큰 글씨·높은 대비로 만들고, 모든 안내를 음성으로 읽어 줍니다.
+
 ```mermaid
 flowchart LR
   APP[Flutter 앱<br/>음성 입력·카메라] -->|JWT| GW
