@@ -169,6 +169,15 @@ flowchart LR
 | **변화** | 글 수 정상 표시. E2E 시나리오(US2-3)로 회귀 확인 |
 | **근거** | [커밋 0a01a9d](https://github.com/wcblogville/blogville/commit/0a01a9d) |
 
+#### ④ 공감을 눌렀다 취소하면 코인이 계속 쌓일 수 있는 구조
+| | |
+| --- | --- |
+| **문제** | 공감을 받으면 글 주인에게 코인·경험치를 줌. 공감 → 취소 → 다시 공감을 반복하거나 두 탭에서 동시에 누르면 보상이 여러 번 나갈 수 있음 |
+| **원인** | "이미 공감했나?"를 읽고 나서 쓰는 방식은 동시 요청 두 개가 둘 다 "아직 안 함"을 읽을 수 있음. 취소하면 공감 행이 사라져 재공감을 새 공감으로 봄 |
+| **해결** | ① 공감 표에 (글, 사람) 유일 제약 + `INSERT … ON CONFLICT DO NOTHING RETURNING`으로 실제로 넣은 요청만 다음 단계로 ② 코인은 **잔액 칸 없이 원장(`point_ledger`)에만 기록**하고, 받는 회원 행을 잠근 트랜잭션(`lockUser`) 안에서 같은 근거(`글id:사람id`)의 보상이 있는지 확인한 뒤 지급 |
+| **변화** | E2E로 **동시 공감 10회 → 공감 중복 0행, 보상 1번, 오류 0건** 확인. 취소 후 재공감해도 보상은 다시 나가지 않음 |
+| **근거** | [커밋 f9e3330](https://github.com/wcblogville/blogville/commit/f9e3330) · [e2e/social.mjs](https://github.com/wcblogville/blogville/blob/develop/e2e/social.mjs) (US3-6) |
+
 > 그 밖에: 매일 밤 성능 검사에서 블로그 첫 화면 점수가 기준 아래로 떨어진 원인을 찾아, 닫혀 있는 동물 도감 창(44칸 그림)을 **처음 열 때 그리도록** 바꿈. 휴대폰 Lighthouse **81 → 87점**, HTML 77KB → 56KB, FCP 2.6 → 1.8초, LCP 3.9 → 3.3초([PR #134](https://github.com/wcblogville/blogville/pull/134))
 >
 > 달이 바뀌면 연속 출석이 0일이 되던 버그를 "가장 최근 출석 1건" 기준으로 고치고 달·해 바뀜 경계를 테스트로 고정([c2c3980](https://github.com/wcblogville/blogville/commit/c2c3980))
@@ -338,6 +347,14 @@ flowchart LR
 | **해결** | 실패한 호출이 **캐시된 연결**이었다면 그 연결을 버리고 새로 붙어 **한 번만** 다시 호출. 새 연결도 실패하면 오류 반환(무한 재시도 방지) |
 | **변화** | 서버 재배포 직후 첫 요청 실패 → 실패 없이 응답 |
 | **근거** | [agent PR #16](https://github.com/fashion-agent-team/fashion-agent-agent/commit/4e83924) |
+
+#### ④ 다른 사람의 옷장을 볼 수 있는 구조와 오래 사는 토큰
+| | |
+| --- | --- |
+| **문제** | 뒤쪽 agent·MCP 서버는 `X-User-Id` 헤더로 사용자를 구분함. 앱이 이 헤더를 조작하면 남의 옷장·일정을 읽을 수 있고, 30일짜리 리프레시 토큰이 새면 오래 악용됨 |
+| **해결** | ① JWT는 **게이트웨이에서만** 확인하고, 앱이 보낸 `X-User-Id`는 지운 뒤 확인한 사용자 id로 다시 붙임. 뒤쪽 서비스 포트는 밖에 열지 않음 ② 리프레시 토큰은 **한 번 쓰면 새로 발급**(DB에는 SHA-256 해시만). 이미 쓴 토큰이 다시 오면 도난으로 보고 그 사용자의 리프레시 토큰을 **모두 끊음** ③ 사용자당 분당 30회, 사진 요청 10회 사용량 제한(429) |
+| **변화** | 실제 PostgreSQL에 붙인 통합 테스트로 "앱이 넣은 X-User-Id는 JWT의 사용자로 바뀜", "리프레시 토큰 재사용 시 모두 끊김", "토큰 없으면 401"을 확인. 게이트웨이 테스트 38개가 PR마다 CI에서 실행 |
+| **근거** | [커밋 ede6ac6](https://github.com/fashion-agent-team/fashion-agent-gateway/commit/ede6ac6) · [GatewayFlowTest](https://github.com/fashion-agent-team/fashion-agent-gateway/blob/main/src/test/java/com/fashionagent/gateway/GatewayFlowTest.java) |
 
 > 그 밖에 해결한 iOS 문제: 카메라 화면에서 앱이 꺼지던 문제를 ML Kit 모델 묶음을 앱에 넣어 해결([7dd5018](https://github.com/fashion-agent-team/fashion-agent/commit/7dd5018)), Firebase SDK 13과 GoogleSignIn 9의 의존성 충돌을 SDK 12.x로 맞춰 해결([191c373](https://github.com/fashion-agent-team/fashion-agent/commit/191c373)), 신호음 뒤 오디오 세션이 꺼져 음성 인식이 아무것도 못 듣던 문제 해결([72a1021](https://github.com/fashion-agent-team/fashion-agent/commit/72a1021))
 
