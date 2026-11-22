@@ -102,6 +102,19 @@
 
 > 화면은 직접 띄운 개발 서버에서 시험 계정으로 찍었습니다. 수업 서버의 배포는 과정이 끝나면 내려갑니다.
 
+**구조와 무중단 배포**
+
+```mermaid
+flowchart LR
+  U[브라우저] --> N1[서버 nginx<br/>강사님 관리]
+  N1 --> P[우리 nginx 컨테이너<br/>:8420]
+  P -->|지금 색| A[앱 파랑 :8421<br/>Next.js 16]
+  P -.->|배포 때 전환| B[앱 초록 :8422<br/>Next.js 16]
+  A --> DB[(PostgreSQL<br/>전용 스키마)]
+  B --> DB
+  GH[GitHub Actions<br/>검사 → 이미지 빌드] -->|SSH · deploy.sh| B
+```
+
 ### 🔧 트러블슈팅
 
 #### ① 상점 페이지가 무거움
@@ -249,6 +262,23 @@
 - 저장소: [fashion-agent](https://github.com/fashion-agent-team/fashion-agent)(앱) · [gateway](https://github.com/fashion-agent-team/fashion-agent-gateway) · [agent](https://github.com/fashion-agent-team/fashion-agent-agent) · MCP 서버 6개(weather, schedule, closet, clothes-state, face-check, helper)
 - 구성: Flutter 앱 → **Spring Cloud Gateway(인증·사용량 제한·TTS/STT)** → **agent(Spring AI + MCP 클라이언트, GPT 판단)** → 기능별 MCP 서버
 - **내 담당:** `fashion-agent-gateway`, `fashion-agent-agent` (두 레포 README에 담당자로 명시), iOS 빌드 문제 해결, 발표용 음성(TTS) 방식 결정
+
+```mermaid
+flowchart LR
+  APP[Flutter 앱<br/>음성 입력·카메라] -->|JWT| GW
+  subgraph GW[gateway :8080 · 내 담당]
+    AUTH[Firebase 토큰 확인<br/>JWT 발급·사용량 제한]
+    TTS[음성 안내 TTS<br/>Azure → Edge 예비]
+  end
+  GW -->|X-User-Id| AG[agent :8081 · 내 담당<br/>Spring AI + GPT]
+  GW --> DB[(PostgreSQL<br/>account 스키마)]
+  AG --> R[(Redis<br/>대화 상태 30분)]
+  AG -->|MCP| W[날씨]
+  AG -->|MCP| S[일정]
+  AG -->|MCP| C[옷장]
+  AG -->|MCP| CS[옷 상태]
+  AG -->|MCP| F[얼굴 확인]
+```
 
 ### 🔧 트러블슈팅
 
