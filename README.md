@@ -1,3 +1,23 @@
+# 이진행 | 풀스택 개발자
+
+> 화면에서 서버, 배포까지 직접 만들고 **숫자로 확인하며 고치는** 개발자입니다.
+> 게임형 블로그 Blogville에서 팀 리드로 요구사항·ERD부터 무중단 배포까지 맡았고,
+> 음성 AI 코디 도우미 패션 에이전트에서는 팀장으로 Spring Cloud Gateway와 LLM 에이전트 서버를 담당했습니다.
+
+📧 jinhaeng2996@naver.com · 🐙 [github.com/ehgo508](https://github.com/ehgo508)
+
+### 기술 스택
+
+| 분야 | 기술 |
+| --- | --- |
+| 프론트엔드 | TypeScript, React, Next.js 16(App Router), Tailwind CSS, Flutter |
+| 백엔드 | Java·Spring Boot, Spring Cloud Gateway, Spring AI(MCP), Node.js(Server Action), FastAPI |
+| 데이터 | PostgreSQL, Drizzle ORM, Flyway, Redis, SQLite |
+| 인프라·품질 | Docker, nginx(블루-그린 배포), GitHub Actions, Playwright E2E, Lighthouse |
+| AI·엣지 | OpenAI API, PyTorch, ONNX Runtime, TensorRT, Jetson Orin Nano |
+
+---
+
 # 🛠 프로젝트 포트폴리오
 
 > 직접 만들고, 측정하고, 고친 기록입니다. **진행한 순서대로** 정리했습니다.
@@ -11,7 +31,7 @@
 | 4 | 2026.10 | [실내 환경 시계열 추론](#4-실내-환경-시계열-추론--co₂온도-예측이상-탐지-상시-서비스) | 개인 | PyTorch(GRU), Chronos-2, ONNX Runtime, TensorRT, MQTT |
 | 5 | 2026.10 | [EmbeddingGemma 2 멀티모달 검색](#5-embeddinggemma-2--엣지에서-멀티모달-검색과-동작-인식) | 개인 | sentence-transformers, 미세 조정, YOLO-pose, YOLOE |
 | 6 | 2026.10 ~ 11 | [Jetson 카메라 응용](#6-jetson-카메라-응용--재실-인원근접-경고-통합-서비스) | 개인 | Jetson Orin Nano, YOLO11 + TensorRT, OpenCV 스테레오, MQTT |
-| 7 | 2026.10 ~ 11 | [패션 에이전트](#7-패션-에이전트--시각장애인용-음성-ai-코디-도우미) | 팀 · 게이트웨이·agent 담당 | Java, Spring Boot, Spring Cloud Gateway, Spring AI(MCP), Flutter |
+| 7 | 2026.10 ~ 11 | [패션 에이전트](#7-패션-에이전트--시각장애인용-음성-ai-코디-도우미) | 팀 · 팀장 · 게이트웨이·agent 담당 | Java, Spring Boot, Spring Cloud Gateway, Spring AI(MCP), Flutter |
 
 ### 한눈에 보는 성능 개선
 
@@ -261,7 +281,7 @@ flowchart LR
 
 - 저장소: [fashion-agent](https://github.com/fashion-agent-team/fashion-agent)(앱) · [gateway](https://github.com/fashion-agent-team/fashion-agent-gateway) · [agent](https://github.com/fashion-agent-team/fashion-agent-agent) · MCP 서버 6개(weather, schedule, closet, clothes-state, face-check, helper)
 - 구성: Flutter 앱 → **Spring Cloud Gateway(인증·사용량 제한·TTS/STT)** → **agent(Spring AI + MCP 클라이언트, GPT 판단)** → 기능별 MCP 서버
-- **내 담당:** `fashion-agent-gateway`, `fashion-agent-agent` (두 레포 README에 담당자로 명시), iOS 빌드 문제 해결, 발표용 음성(TTS) 방식 결정
+- **내 역할:** 팀장. `fashion-agent-gateway`, `fashion-agent-agent` (두 레포 README에 담당자로 명시), iOS 빌드 문제 해결, 발표용 음성(TTS) 방식 결정
 
 <img src="images/fashion-agent-start.png" alt="패션 에이전트 앱 첫 화면" width="260">
 
