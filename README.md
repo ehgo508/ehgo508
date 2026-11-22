@@ -16,6 +16,14 @@
 | 인프라·품질 | Docker, nginx(블루-그린 배포), GitHub Actions, Playwright E2E, Lighthouse |
 | AI·엣지 | OpenAI API, PyTorch, ONNX Runtime, TensorRT, Jetson Orin Nano |
 
+### 자격증
+
+| 자격증 | 취득 |
+| --- | --- |
+| 정보처리기사 | 2026.06 |
+| SQLD | 2026.03 |
+| 한국사능력검정시험 2급 | |
+
 ---
 
 # 🛠 프로젝트 포트폴리오
