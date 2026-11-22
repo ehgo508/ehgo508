@@ -96,6 +96,12 @@
 - 기술: Next.js 16(App Router), TypeScript, PostgreSQL + Drizzle ORM, Better Auth(카카오·네이버·구글), Tiptap, Phaser 4, Playwright, GitHub Actions, Docker, nginx
 - **내 역할:** 팀 리드. 저장소 운영과 PR 리뷰·병합, 요구사항·ERD 작성, 회원·블로그·게임 기능 구현, 배포 파이프라인
 
+| 첫 화면 (로그인·가입) | 광장 (Phaser 2D 마을) | 블로그 홈 (우리 집) |
+| --- | --- | --- |
+| ![Blogville 첫 화면](images/blogville-landing.png) | ![Blogville 광장](images/blogville-town.png) | ![Blogville 블로그 홈](images/blogville-blog.png) |
+
+> 화면은 직접 띄운 개발 서버에서 시험 계정으로 찍었습니다. 수업 서버의 배포는 과정이 끝나면 내려갑니다.
+
 ### 🔧 트러블슈팅
 
 #### ① 상점 페이지가 무거움
