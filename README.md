@@ -31,7 +31,7 @@
 | 4 | 2026.10 | [실내 환경 시계열 추론](#4-실내-환경-시계열-추론--co₂온도-예측이상-탐지-상시-서비스) | 개인 · 엣지 AI | PyTorch(GRU), Chronos-2, ONNX Runtime, TensorRT, MQTT |
 | 5 | 2026.10 | [EmbeddingGemma 2 멀티모달 검색](#5-embeddinggemma-2--엣지에서-멀티모달-검색과-동작-인식) | 개인 · 엣지 AI | sentence-transformers, 미세 조정, YOLO-pose, YOLOE |
 | 6 | 2026.10 ~ 11 | [Jetson 카메라 응용](#6-jetson-카메라-응용--재실-인원근접-경고-통합-서비스) | 개인 · 엣지 AI | Jetson Orin Nano, YOLO11 + TensorRT, OpenCV 스테레오, MQTT |
-| 7 | 2026.10 ~ 11 | ⭐ [패션 에이전트](#7-패션-에이전트--시각장애인용-음성-ai-코디-도우미) | 팀 · 팀장 · 게이트웨이·agent 담당 | Java, Spring Boot, Spring Cloud Gateway, Spring AI(MCP), Flutter |
+| 7 | 2026.10 ~ 11 | ⭐ [패션 에이전트](#7-패션-에이전트--시각장애인용-음성-ai-코디-도우미) | 팀 (3명) · 팀장 · 게이트웨이·agent 담당 | Java, Spring Boot, Spring Cloud Gateway, Spring AI(MCP), Flutter |
 
 **⭐ 대표 프로젝트** 풀스택 역량을 가장 잘 보여 주는 두 프로젝트입니다.
 - **[Blogville](#3-blogville--글을-쓸수록-마을이-자라는-게임형-블로그)**: 팀 리드. Next.js 화면부터 PostgreSQL 설계, E2E 테스트, Docker 블루-그린 무중단 배포까지 한 서비스를 끝까지
@@ -121,6 +121,7 @@
 - 저장소: [wcblogville/blogville](https://github.com/wcblogville/blogville) (커밋 400여 개, PR 120여 개) · 설계 문서: [wcblogville/docs](https://github.com/wcblogville/docs)
 - 기술: Next.js 16(App Router), TypeScript, PostgreSQL + Drizzle ORM, Better Auth(카카오·네이버·구글), Tiptap, Phaser 4, Playwright, GitHub Actions, Docker, nginx
 - **내 역할:** 팀 리드. 저장소 운영과 PR 리뷰·병합, 요구사항·ERD 작성, 회원·블로그·게임 기능 구현, 배포 파이프라인
+- **기여:** 병합된 PR 122개 중 **101개(83%)**를 직접 올림 (2026-11-22, GitHub PR 작성자 기준)
 
 | 첫 화면 (로그인·가입) | 광장 (Phaser 2D 마을) | 블로그 홈 (우리 집) |
 | --- | --- | --- |
@@ -306,6 +307,7 @@ flowchart LR
 - 저장소: [fashion-agent](https://github.com/fashion-agent-team/fashion-agent)(앱) · [gateway](https://github.com/fashion-agent-team/fashion-agent-gateway) · [agent](https://github.com/fashion-agent-team/fashion-agent-agent) · MCP 서버 6개(weather, schedule, closet, clothes-state, face-check, helper)
 - 구성: Flutter 앱 → **Spring Cloud Gateway(인증·사용량 제한·TTS/STT)** → **agent(Spring AI + MCP 클라이언트, GPT 판단)** → 기능별 MCP 서버
 - **내 역할:** 팀장. `fashion-agent-gateway`, `fashion-agent-agent` (두 레포 README에 담당자로 명시), iOS 빌드 문제 해결, 발표용 음성(TTS) 방식 결정
+- **기여:** 팀 3명이 앱·게이트웨이·agent·MCP 서버 8개 저장소에 병합한 PR 278개 중 **102개(37%)**를 올림, 팀원 중 가장 많음. 담당한 gateway는 23개 중 15개, agent는 56개 중 26개 (2026-11-22, GitHub PR 작성자 기준)
 
 <img src="images/fashion-agent-start.png" alt="패션 에이전트 앱 첫 화면" width="260">
 
