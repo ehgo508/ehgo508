@@ -70,7 +70,7 @@
 | | |
 | --- | --- |
 | **문제** | React 개발 서버에서 FastAPI를 부르면 브라우저가 응답을 막음 |
-| **원인** | 출처(포트)가 다른 요청이라 CORS 정책에 걸림 (커밋 내용으로 추정) |
+| **원인** | React 개발 서버와 FastAPI가 서로 다른 포트(출처)에서 돌아, 브라우저의 CORS 정책이 응답을 막음 |
 | **해결** | FastAPI에 `CORSMiddleware` 추가, 공공데이터 호출에 상태 코드별 오류 응답 추가 |
 | **변화** | 프론트에서 관광지 조회·코스 생성 API 호출 성공 |
 | **근거** | [커밋 034d8aa](https://github.com/ehgo508/coursebox-app/commit/034d8aa) |
@@ -93,6 +93,7 @@
 **한 줄 소개** 수업 기록을 Markdown으로 쓰면 Python이 SQLite DB로 빌드하고, 브라우저가 sql.js(WebAssembly)로 직접 SQL을 조회하는 블로그. 학습 잔디·달력·태그·질문 노트·SQL 콘솔 제공.
 
 - 저장소: [blog-basic-devlog](https://github.com/AIP-1/blog-basic-AIGJ_01_013-devlog)
+- 기술: HTML·CSS·JavaScript, SQLite + sql.js(WebAssembly), Python(Markdown → DB 빌드), GitHub Actions·Pages
 
 ### 🔧 트러블슈팅
 
@@ -165,7 +166,8 @@ flowchart LR
 #### ② 배포할 때마다 서비스가 끊김
 | | |
 | --- | --- |
-| **문제** | 새 버전을 배포하면 기존 컨테이너를 내리고 새로 띄우는 동안 사이트가 열리지 않음 (배포 방식으로 추정) |
+| **문제** | 새 버전을 배포하면 새 앱이 뜰 때까지 사이트가 열리지 않음 |
+| **원인** | 배포 스크립트가 옛 컨테이너를 먼저 지우고(`docker rm -f`) 새 컨테이너를 띄우는 방식이라, 그 사이에 응답할 앱이 없음 |
 | **해결** | **블루-그린 무중단 배포**: 앱을 8421·8422에 번갈아 띄우고, 새 앱 응답 확인 → `nginx -t`·reload로 전환 → 옛 앱 종료. 새 앱이 응답하지 않으면 새 앱만 지우고 옛 앱 유지. 바로 전 버전으로 되돌리는 rollback 추가 |
 | **변화** | 배포 중에도 기존 앱이 계속 응답, 실패한 배포가 서비스를 멈추지 않음. 전환 중 0.2초마다 요청을 보내 실패 수를 배포 로그에 기록 |
 | **근거** | [커밋 e12ee10](https://github.com/wcblogville/blogville/commit/e12ee10) |
@@ -236,6 +238,7 @@ flowchart LR
 **한 줄 소개** 8GB Jetson에 EmbeddingGemma 2를 올려 텍스트·이미지·음성을 한 벡터 공간에서 검색하고, 물체 검색·동작 인식·카메라 2대 접근 감지로 확장했습니다.
 
 - 저장소: [embedding_gemma2](https://github.com/AIP-1/embedding_gemma2-AIGJ_01_013) · [최종 보고서](https://github.com/AIP-1/embedding_gemma2-AIGJ_01_013/tree/main/report)
+- 기술: Jetson Orin Nano, PyTorch(CUDA), sentence-transformers(EmbeddingGemma 2, 미세 조정), Ultralytics YOLO-pose·YOLOE, OpenCV 스테레오, FastAPI
 
 ### 🔧 트러블슈팅
 
