@@ -27,11 +27,17 @@
 | --- | --- | --- | --- | --- |
 | 1 | 2026.03 ~ 06 | [CourseBox](#1-coursebox--ai-여행-코스-추천) | 산학 팀 프로젝트 (4명) · 팀장 | React, FastAPI, TourAPI, OpenAI API |
 | 2 | 2026.10 | [개발 일지 블로그](#2-개발-일지-블로그--정적-사이트--sqlite--github-actions) | 개인 | HTML/JS, SQLite(sql.js), Python, GitHub Actions |
-| 3 | 2026.10 | [Blogville](#3-blogville--글을-쓸수록-마을이-자라는-게임형-블로그) | 팀 (3명) · 팀 리드 | Next.js 16, TypeScript, PostgreSQL, Drizzle, Phaser, Playwright, Docker |
-| 4 | 2026.10 | [실내 환경 시계열 추론](#4-실내-환경-시계열-추론--co₂온도-예측이상-탐지-상시-서비스) | 개인 | PyTorch(GRU), Chronos-2, ONNX Runtime, TensorRT, MQTT |
-| 5 | 2026.10 | [EmbeddingGemma 2 멀티모달 검색](#5-embeddinggemma-2--엣지에서-멀티모달-검색과-동작-인식) | 개인 | sentence-transformers, 미세 조정, YOLO-pose, YOLOE |
-| 6 | 2026.10 ~ 11 | [Jetson 카메라 응용](#6-jetson-카메라-응용--재실-인원근접-경고-통합-서비스) | 개인 | Jetson Orin Nano, YOLO11 + TensorRT, OpenCV 스테레오, MQTT |
-| 7 | 2026.10 ~ 11 | [패션 에이전트](#7-패션-에이전트--시각장애인용-음성-ai-코디-도우미) | 팀 · 팀장 · 게이트웨이·agent 담당 | Java, Spring Boot, Spring Cloud Gateway, Spring AI(MCP), Flutter |
+| 3 | 2026.10 | ⭐ [Blogville](#3-blogville--글을-쓸수록-마을이-자라는-게임형-블로그) | 팀 (3명) · 팀 리드 | Next.js 16, TypeScript, PostgreSQL, Drizzle, Phaser, Playwright, Docker |
+| 4 | 2026.10 | [실내 환경 시계열 추론](#4-실내-환경-시계열-추론--co₂온도-예측이상-탐지-상시-서비스) | 개인 · 엣지 AI | PyTorch(GRU), Chronos-2, ONNX Runtime, TensorRT, MQTT |
+| 5 | 2026.10 | [EmbeddingGemma 2 멀티모달 검색](#5-embeddinggemma-2--엣지에서-멀티모달-검색과-동작-인식) | 개인 · 엣지 AI | sentence-transformers, 미세 조정, YOLO-pose, YOLOE |
+| 6 | 2026.10 ~ 11 | [Jetson 카메라 응용](#6-jetson-카메라-응용--재실-인원근접-경고-통합-서비스) | 개인 · 엣지 AI | Jetson Orin Nano, YOLO11 + TensorRT, OpenCV 스테레오, MQTT |
+| 7 | 2026.10 ~ 11 | ⭐ [패션 에이전트](#7-패션-에이전트--시각장애인용-음성-ai-코디-도우미) | 팀 · 팀장 · 게이트웨이·agent 담당 | Java, Spring Boot, Spring Cloud Gateway, Spring AI(MCP), Flutter |
+
+**⭐ 대표 프로젝트** 풀스택 역량을 가장 잘 보여 주는 두 프로젝트입니다.
+- **[Blogville](#3-blogville--글을-쓸수록-마을이-자라는-게임형-블로그)**: 팀 리드. Next.js 화면부터 PostgreSQL 설계, E2E 테스트, Docker 블루-그린 무중단 배포까지 한 서비스를 끝까지
+- **[패션 에이전트](#7-패션-에이전트--시각장애인용-음성-ai-코디-도우미)**: 팀장. Spring Cloud Gateway(인증·사용량 제한·음성)와 LLM 에이전트 서버를 맡아 MSA 구조로 구현
+
+**엣지 AI** 4~6번은 Jetson Orin Nano 한 대에서 모델을 최적화하고(TensorRT·ONNX) 상시 서비스로 운영한 과제입니다.
 
 ### 한눈에 보는 성능 개선
 
