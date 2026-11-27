@@ -1,20 +1,27 @@
+<div align="center">
+
 # 이진행 | 풀스택 개발자
 
-> 화면에서 서버, 배포까지 직접 만들고 **숫자로 확인하며 고치는** 개발자입니다.
-> 게임형 블로그 Blogville에서 팀 리드로 요구사항·ERD부터 무중단 배포까지 맡았고,
-> 음성 AI 코디 도우미 패션 에이전트에서는 팀장으로 Spring Cloud Gateway와 LLM 에이전트 서버를 담당했습니다.
+화면에서 서버, 배포까지 직접 만들고 **숫자로 확인하며 고치는** 개발자입니다.
 
-📧 jinhaeng2996@naver.com · 🐙 [github.com/ehgo508](https://github.com/ehgo508)
+<a href="mailto:jinhaeng2996@naver.com"><img src="https://img.shields.io/badge/jinhaeng2996%40naver.com-03C75A?style=flat-square&logo=naver&logoColor=white" alt="이메일"></a>
+<a href="https://github.com/ehgo508"><img src="https://img.shields.io/badge/github.com%2Fehgo508-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"></a>
+
+</div>
+
+- 🏘 **Blogville** 팀 리드: 요구사항·ERD부터 Next.js 구현, E2E 테스트, Docker 블루-그린 무중단 배포까지 (PR 83% 작성)
+- 👕 **패션 에이전트** 팀장: Spring Cloud Gateway(인증·사용량 제한·음성)와 LLM 에이전트 서버 담당
+- 📈 문제를 숫자로 재고 고칩니다: 웹캠 지연 **0.7~0.9초 → 40ms 이하**, GPT 응답 **25초 초과 → 대부분 1~4초**, 상점 HTML **0.9MB → 0.4MB**
 
 ### 기술 스택
 
 | 분야 | 기술 |
 | --- | --- |
-| 프론트엔드 | TypeScript, React, Next.js 16(App Router), Tailwind CSS, Flutter |
-| 백엔드 | Java·Spring Boot, Spring Cloud Gateway, Spring AI(MCP), Node.js(Server Action), FastAPI |
-| 데이터 | PostgreSQL, Drizzle ORM, Flyway, Redis, SQLite |
-| 인프라·품질 | Docker, nginx(블루-그린 배포), GitHub Actions, Playwright E2E, Lighthouse |
-| AI·엣지 | OpenAI API, PyTorch, ONNX Runtime, TensorRT, Jetson Orin Nano |
+| 프론트엔드 | <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"> <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React"> <img src="https://img.shields.io/badge/Next.js%2016-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js 16"> <img src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS"> <img src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white" alt="Flutter"> |
+| 백엔드 | <img src="https://img.shields.io/badge/Java-007396?style=flat-square" alt="Java"> <img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white" alt="Spring Boot"> <img src="https://img.shields.io/badge/Spring%20Cloud%20Gateway-6DB33F?style=flat-square&logo=spring&logoColor=white" alt="Spring Cloud Gateway"> <img src="https://img.shields.io/badge/Spring%20AI%20%28MCP%29-6DB33F?style=flat-square&logo=spring&logoColor=white" alt="Spring AI (MCP)"> <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js"> <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI"> |
+| 데이터 | <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL"> <img src="https://img.shields.io/badge/Drizzle%20ORM-C5F74F?style=flat-square&logo=drizzle&logoColor=black" alt="Drizzle ORM"> <img src="https://img.shields.io/badge/Flyway-CC0200?style=flat-square&logo=flyway&logoColor=white" alt="Flyway"> <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" alt="Redis"> <img src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite"> |
+| 인프라·품질 | <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker"> <img src="https://img.shields.io/badge/nginx-009639?style=flat-square&logo=nginx&logoColor=white" alt="nginx"> <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions"> <img src="https://img.shields.io/badge/Playwright-2EAD33?style=flat-square" alt="Playwright"> <img src="https://img.shields.io/badge/Lighthouse-F44B21?style=flat-square&logo=lighthouse&logoColor=white" alt="Lighthouse"> |
+| AI·엣지 | <img src="https://img.shields.io/badge/OpenAI%20API-412991?style=flat-square" alt="OpenAI API"> <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch"> <img src="https://img.shields.io/badge/ONNX%20Runtime-005CED?style=flat-square&logo=onnx&logoColor=white" alt="ONNX Runtime"> <img src="https://img.shields.io/badge/TensorRT-76B900?style=flat-square&logo=nvidia&logoColor=white" alt="TensorRT"> <img src="https://img.shields.io/badge/Jetson%20Orin%20Nano-76B900?style=flat-square&logo=nvidia&logoColor=white" alt="Jetson Orin Nano"> |
 
 ### 자격증
 
@@ -29,8 +36,8 @@
 
 # 🛠 프로젝트 포트폴리오
 
-> 직접 만들고, 측정하고, 고친 기록입니다. **진행한 순서대로** 정리했습니다.
-> 프로젝트마다 실제로 부딪힌 문제 2~3개를 **문제 → 원인 → 해결 → 성능 변화** 순서로 적었고, 근거가 되는 커밋·PR·보고서 링크를 달았습니다.
+> 직접 만들고, 측정하고, 고친 기록입니다. **진행한 순서대로** 정리했습니다. ⭐ 대표 프로젝트는 트러블슈팅을 펼쳐 두었고, 나머지는 눌러서 볼 수 있습니다.
+> 프로젝트마다 실제로 부딪힌 문제 2~4개를 **문제 → 원인 → 해결 → 성능 변화** 순서로 적었고, 근거가 되는 커밋·PR·보고서 링크를 달았습니다.
 
 | # | 기간 | 프로젝트 | 성격 | 핵심 기술 |
 | --- | --- | --- | --- | --- |
@@ -73,7 +80,8 @@
 - 기술: React(Vite, Tailwind), FastAPI, SQLite, 한국관광공사 TourAPI, OpenAI API
 - 성격: **산학 팀 프로젝트(4명), 팀장·풀스택.** 처음 한 팀 작업이라 Git 협업 방식을 몰라, 팀원들의 작업을 제가 모아 한 저장소에 올렸습니다.
 
-### 🔧 트러블슈팅
+<details>
+<summary><b>🔧 트러블슈팅 2건 펼쳐 보기</b></summary>
 
 #### ① 프론트에서 백엔드 API 호출이 막힘
 | | |
@@ -92,6 +100,8 @@
 | **변화** | 이후 커밋부터 코드에 키가 남지 않음 |
 | **근거** | [커밋 034d8aa](https://github.com/ehgo508/coursebox-app/commit/034d8aa) |
 
+</details>
+
 ### 💡 배운 점
 한 사람이 모든 코드를 올리다 보니 누가 무엇을 바꿨는지 기록이 남지 않았습니다. 이 경험 뒤로 브랜치·PR·코드 리뷰를 공부했고, 다음 팀 프로젝트인 Blogville에서는 PR 120여 개를 리뷰·병합하며 협업했습니다.
 
@@ -104,7 +114,8 @@
 - 저장소: [blog-basic-devlog](https://github.com/AIP-1/blog-basic-AIGJ_01_013-devlog)
 - 기술: HTML·CSS·JavaScript, SQLite + sql.js(WebAssembly), Python(Markdown → DB 빌드), GitHub Actions·Pages
 
-### 🔧 트러블슈팅
+<details>
+<summary><b>🔧 트러블슈팅 2건 펼쳐 보기</b></summary>
 
 #### ① 빌드를 깜빡하면 새 글이 안 보임
 | | |
@@ -121,6 +132,8 @@
 | **원인** | 워크플로 파일은 GitHub 서버에서 명령을 실행시키므로 별도 `workflow` 권한이 필요한데, 처음 받은 토큰에는 `repo`, `gist`, `read:org`만 있었음 |
 | **해결** | `gh auth refresh -h github.com -s workflow`로 권한 추가 |
 | **변화** | push와 자동 배포 성공 |
+
+</details>
 
 ---
 
@@ -212,7 +225,8 @@ flowchart LR
 - 저장소: [timeseries-inference](https://github.com/AIP-1/timeseries-inference-AIGJ_01_013) · [최종 보고서](https://github.com/AIP-1/timeseries-inference-AIGJ_01_013/tree/main/report)
 - 기술: PyTorch GRU, 오토인코더, MLP, Chronos-2, ONNX Runtime, TensorRT, MQTT, InfluxDB, systemd
 
-### 🔧 트러블슈팅
+<details>
+<summary><b>🔧 트러블슈팅 3건 펼쳐 보기</b></summary>
 
 #### ① 학습 직후부터 과적합, 예측이 "직전값 유지"보다 나쁨
 | | |
@@ -240,6 +254,8 @@ flowchart LR
 
 > 그 밖에: 센서 게이트웨이 1대의 시계가 약 5분 빨라 값이 다른 5분 칸에 들어가던 문제를 네트워크 서버 수신 시각(`nsTime`) 기준으로 바꿔 해결
 
+</details>
+
 ---
 
 ## 5. EmbeddingGemma 2 — 엣지에서 멀티모달 검색과 동작 인식
@@ -249,7 +265,8 @@ flowchart LR
 - 저장소: [embedding_gemma2](https://github.com/AIP-1/embedding_gemma2-AIGJ_01_013) · [최종 보고서](https://github.com/AIP-1/embedding_gemma2-AIGJ_01_013/tree/main/report)
 - 기술: Jetson Orin Nano, PyTorch(CUDA), sentence-transformers(EmbeddingGemma 2, 미세 조정), Ultralytics YOLO-pose·YOLOE, OpenCV 스테레오, FastAPI
 
-### 🔧 트러블슈팅
+<details>
+<summary><b>🔧 트러블슈팅 3건 펼쳐 보기</b></summary>
 
 #### ① 미세 조정 후 도메인 점수는 올랐는데 일반 질의가 틀림
 | | |
@@ -275,6 +292,8 @@ flowchart LR
 | **해결** | 구성별 RAM·지연을 따로 측정하고, 프레임을 `batch_size=4`로 나눠 입력 |
 | **변화** | 8GB 보드에서 텍스트·이미지·음성·동영상 검색 모두 동작(텍스트 146ms, 전체 구성 RAM 6.1GB) |
 
+</details>
+
 ---
 
 ## 6. Jetson 카메라 응용 — 재실 인원·근접 경고 통합 서비스
@@ -284,7 +303,8 @@ flowchart LR
 - 저장소: [practice_task_for_jetson_camera_applications](https://github.com/AIP-1/practice_task_for_jetson_camera_applications-AIGJ_01_013) · [최종 보고서](https://github.com/AIP-1/practice_task_for_jetson_camera_applications-AIGJ_01_013/tree/main/report)
 - 기술: YOLO11 + TensorRT FP16(PyTorch 25.2ms → 4.0ms), YOLO-pose, YOLOE, OpenCV SGBM 스테레오, NVDEC, MQTT, systemd
 
-### 🔧 트러블슈팅
+<details>
+<summary><b>🔧 트러블슈팅 3건 펼쳐 보기</b></summary>
 
 #### ① 처리가 느리면 영상 지연이 끝없이 쌓임
 | | |
@@ -309,6 +329,8 @@ flowchart LR
 | **원인** | 무늬가 없으면 좌우 영상 매칭 근거가 없는데도 SGBM이 그럴듯한 시차를 냄. "측정 불가"보다 더 위험한 실패 |
 | **해결** | 7×7 밝기 표준편차가 낮은 픽셀 제외(무늬 게이트) + 유효 픽셀 비율 하한 + 1초 중앙값 |
 | **변화** | 흰 면에서 틀린 값 대신 "측정 불가" 반환. 사람별 거리 오차 2.7m 이상에서 **±1.3%** 이내 |
+
+</details>
 
 ---
 
