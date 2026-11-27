@@ -7,7 +7,7 @@
 
 </div>
 
-- 🏘 **Blogville** 팀 리드: 요구사항·ERD부터 Next.js 구현, E2E 테스트, Docker 블루-그린 무중단 배포까지 (PR 83% 작성)
+- 🏘 **Blogville**: 요구사항·ERD는 팀과 함께 정하고, 이후 Next.js 구현·E2E 테스트·Docker 블루-그린 무중단 배포까지 혼자 진행
 - 👕 **패션 에이전트** 팀장: Spring Cloud Gateway(인증·사용량 제한·음성)와 LLM 에이전트 서버 담당
 - 📈 문제를 숫자로 재고 고칩니다: 웹캠 지연 **0.7~0.9초 → 40ms 이하**, GPT 응답 **25초 초과 → 대부분 1~4초**, 상점 HTML **0.9MB → 0.4MB**
 
@@ -41,14 +41,14 @@
 | --- | --- | --- | --- | --- |
 | 1 | 2026.03 ~ 06 | [CourseBox](#1-coursebox--ai-여행-코스-추천) | 산학 팀 프로젝트 (4명) · 팀장 | React, FastAPI, TourAPI, OpenAI API |
 | 2 | 2026.10 | [개발 일지 블로그](#2-개발-일지-블로그--정적-사이트--sqlite--github-actions) | 개인 | HTML/JS, SQLite(sql.js), Python, GitHub Actions |
-| 3 | 2026.10 | ⭐ [Blogville](#3-blogville--글을-쓸수록-마을이-자라는-게임형-블로그) | 팀 (3명) · 팀 리드 | Next.js 16, TypeScript, PostgreSQL, Drizzle, Phaser, Playwright, Docker |
+| 3 | 2026.10 | ⭐ [Blogville](#3-blogville--글을-쓸수록-마을이-자라는-게임형-블로그) | 개인 (요구사항·ERD는 팀 3명) | Next.js 16, TypeScript, PostgreSQL, Drizzle, Phaser, Playwright, Docker |
 | 4 | 2026.10 | [실내 환경 시계열 추론](#4-실내-환경-시계열-추론--co₂온도-예측이상-탐지-상시-서비스) | 개인 · 엣지 AI | PyTorch(GRU), Chronos-2, ONNX Runtime, TensorRT, MQTT |
 | 5 | 2026.10 | [EmbeddingGemma 2 멀티모달 검색](#5-embeddinggemma-2--엣지에서-멀티모달-검색과-동작-인식) | 개인 · 엣지 AI | sentence-transformers, 미세 조정, YOLO-pose, YOLOE |
 | 6 | 2026.10 ~ 11 | [Jetson 카메라 응용](#6-jetson-카메라-응용--재실-인원근접-경고-통합-서비스) | 개인 · 엣지 AI | Jetson Orin Nano, YOLO11 + TensorRT, OpenCV 스테레오, MQTT |
 | 7 | 2026.10 ~ 11 | ⭐ [패션 에이전트](#7-패션-에이전트--시각장애인용-음성-ai-코디-도우미) | 팀 (3명) · 팀장 · 게이트웨이·agent 담당 | Java, Spring Boot, Spring Cloud Gateway, Spring AI(MCP), Flutter |
 
 **⭐ 대표 프로젝트** 풀스택 역량을 가장 잘 보여 주는 두 프로젝트입니다.
-- **[Blogville](#3-blogville--글을-쓸수록-마을이-자라는-게임형-블로그)**: 팀 리드. Next.js 화면부터 PostgreSQL 설계, E2E 테스트, Docker 블루-그린 무중단 배포까지 한 서비스를 끝까지
+- **[Blogville](#3-blogville--글을-쓸수록-마을이-자라는-게임형-블로그)**: 팀과 정한 요구사항·ERD를 바탕으로 Next.js 화면, PostgreSQL, E2E 테스트, Docker 블루-그린 무중단 배포까지 혼자 끝까지
 - **[패션 에이전트](#7-패션-에이전트--시각장애인용-음성-ai-코디-도우미)**: 팀장. Spring Cloud Gateway(인증·사용량 제한·음성)와 LLM 에이전트 서버를 맡아 MSA 구조로 구현
 
 **엣지 AI** 4~6번은 Jetson Orin Nano 한 대에서 모델을 최적화하고(TensorRT·ONNX) 상시 서비스로 운영한 과제입니다.
@@ -101,7 +101,7 @@
 </details>
 
 ### 💡 배운 점
-한 사람이 모든 코드를 올리다 보니 누가 무엇을 바꿨는지 기록이 남지 않았습니다. 이 경험 뒤로 브랜치·PR·코드 리뷰를 공부했고, 다음 팀 프로젝트인 Blogville에서는 PR 120여 개를 리뷰·병합하며 협업했습니다.
+한 사람이 모든 코드를 올리다 보니 누가 무엇을 바꿨는지 기록이 남지 않았습니다. 이 경험 뒤로 브랜치·PR·코드 리뷰를 공부해, Blogville은 git flow(feature → develop → release → main)와 PR마다 자동 검사로 운영했고, 패션 에이전트에서는 팀원 3명이 PR 278개를 주고받으며 협업했습니다.
 
 ---
 
@@ -141,8 +141,7 @@
 
 - 저장소: [wcblogville/blogville](https://github.com/wcblogville/blogville) (커밋 400여 개, PR 120여 개) · 설계 문서: [wcblogville/docs](https://github.com/wcblogville/docs)
 - 기술: Next.js 16(App Router), TypeScript, PostgreSQL + Drizzle ORM, Better Auth(카카오·네이버·구글), Tiptap, Phaser 4, Playwright, GitHub Actions, Docker, nginx
-- **내 역할:** 팀 리드. 저장소 운영과 PR 리뷰·병합, 요구사항·ERD 작성, 회원·블로그·게임 기능 구현, 배포 파이프라인
-- **기여:** 병합된 PR 122개 중 **101개(83%)**를 직접 올림 (2026-11-22, GitHub PR 작성자 기준)
+- **진행 방식:** 요구사항 분석과 ERD는 팀원 3명이 함께 정했고, 그 뒤 구현·테스트·배포는 **개인 프로젝트로 혼자** 진행했습니다. 저장소 운영(git flow), 회원·블로그·게임 기능, CI·배포 파이프라인 모두 직접 맡았습니다.
 
 | 첫 화면 (로그인·가입) | 광장 (Phaser 2D 마을) | 블로그 홈 (우리 집) |
 | --- | --- | --- |
