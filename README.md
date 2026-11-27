@@ -2,8 +2,6 @@
 
 # 이진행 | 풀스택 개발자
 
-화면에서 서버, 배포까지 직접 만들고 **숫자로 확인하며 고치는** 개발자입니다.
-
 <a href="mailto:jinhaeng2996@naver.com"><img src="https://img.shields.io/badge/jinhaeng2996%40naver.com-03C75A?style=flat-square&logo=naver&logoColor=white" alt="이메일"></a>
 <a href="https://github.com/ehgo508"><img src="https://img.shields.io/badge/github.com%2Fehgo508-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"></a>
 
